@@ -7,11 +7,11 @@
             <table id="" class="table table-striped tabel-bordered" cellspacing="0" width="100%">
                 <thead>
                     <tr>
-                        <th>no</th>
-                        <th>nama wisata</th>
-                        <th>deskripsi</th>
-                        <th>harga</th>
-                        <th>poto</th>
+                        <th>No</th>
+                        <th>Nama Wisata</th>
+                        <th>Deskripsi</th>
+                        <th>Harga</th>
+                        <th>Foto</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>

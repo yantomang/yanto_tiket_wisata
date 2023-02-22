@@ -11,6 +11,7 @@
 
         if($sdd){
             move_uploaded_file($file_tmp, '../img/'.$nama_gambar);
+            header('location:index.php?page=tabel' );
         }
     }
 ?>

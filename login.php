@@ -24,6 +24,7 @@
               <input type="password" class="form-control border border-secondary" id="password" name="password" required>
             </div>
             <div class="text-end">
+              <a href="reg.php">Sig up</a>
               <button type="submit" class="btn btn-primary" name="login">submit</a></button>
             </div>
         </div>

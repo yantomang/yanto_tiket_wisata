@@ -15,10 +15,45 @@ $id=$_GET['id'];
         $add = $conn->query("INSERT INTO tb_pemesanan VALUE ('', '$nama_pemesan', '$email', '$no_hp', '$Tanggal_wisata', '$jumlah_tiket', '$nama_wisata', '$harga')");
 
         if($add){
-          header('location:../user/lebel.php');
+          header('location:../user/home.php');
         }
     }
 ?>
+
+
+<!--- awal navbar -->
+<nav class="navbar navbar-expand bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand text-white" href="#"><i class="bi bi-amd"></i> Go Bandung</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active text-white" aria-current="page" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#paket wisata">Paket Wisata</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#Akomodasi">Akomodasi</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#galeri">Galeri</a>
+        </li>   
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active text-danger" aria-current="page" a href="proses_logout.php">Logout <i class="bi bi-box-arrow-right"></i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!--- akhir navbar -->
 
 
 <body background="../img/bg9.jpg" style="background-repeat: no-repeat; background-size:  100%;">
@@ -27,40 +62,25 @@ $id=$_GET['id'];
 
 
 <!--- awal forms -->
-<form action="" method="post" class="container"style=" background: white; width: 500px; padding: 50px; margin-top: 5px;border-radius: 10px; box-shadow: 0 7px 25px rgba(0, 0, 0, 0.8);">
+<form action="" method="post" class="container"style=" background: white; width: 500px; padding: 50px; margin-top: 65px;border-radius: 10px; box-shadow: 0 7px 25px rgba(0, 0, 0, 0.8);">
     <h2 class="text-center">Pesan tiket</h2>
+      <img src="../img/<?php echo $data['gambar']?>" alt="" style="width: 25rem; height: 10rem; padding: 10px; border-radius: 20px;">
+                  <?php
+                    $pesan=$conn->query("select Nama_wisata,harga from tambah_data_wisata where id='$id'");
+                    $p=$pesan->fetch_array();
+                  ?>
+                    <h3> <?=$p['Nama_wisata'] ?></h3>
+
+                    <h4>Rp.<?php echo $p['harga'] ?></h4>
+                    
       <div class="mb-2">
-          <label for="exampleInputname1" class="form-label">Name</label>
-          <input type="text" name="nama_pemesan" class="form-control border border-secondary" id="exampleInputname1" placeholder="name" required>
-      </div>
-      <div class="mb-2">
-          <label for="exampleInputEmail1" class="form-label">address email</label>
-          <input type="email" name="email" class="form-control border border-secondary" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="name@gmail.com" required>
-      </div>
-      <div class="mb-2">
-          <label for="exampleInputtelepon1" class="form-label">No.phone</label>
-          <input type="textr" name="no_hp" class="form-control border border-secondary" id="exampleInputtelepon1" placeholder="number" required>
-      </div>
+          <label for="exampleInputjumlah1" class="form-label">Jumlah tiket</label>
+          <input type="number" name="jumlah_tiket" class="form-control border border-secondary" id="exampleInputjumlah1" required>
+    </div>
       <div class="mb-2">
           <label for="exampleInputtanggal1" class="form-label">date</label>
           <input type="date" name="Tanggal_wisata" class="form-control border border-secondary" id="exampleInputtanggal1" required>
       </div>
-      <div class="mb-2">
-          <label for="exampleInputjumlah1" class="form-label">Jumlah tiket</label>
-          <input type="number" name="jumlah_tiket" class="form-control border border-secondary" id="exampleInputjumlah1" required>
-      </div>
-          <label for="exampleInputjumlah1" class="form-label">Name tour</label>
-            <select class="form-control border border-secondary" name="nama_wisata" aria-label="Default select example" required>
-               <?php
-                $pesan=$conn->query("select Nama_wisata,harga from tambah_data_wisata where id='$id'");
-                $p=$pesan->fetch_array();
-               ?>
-            <option selected> <?=$p['Nama_wisata'] ?></option>
-            </select>
-    <div class="mb-3">
-        <label for="exampleInputtelepon1" class="form-label">harga</label>
-        <input type="text" name="harga" value="<?php echo $p['harga'] ?>" class="form-control border border-secondary" id="exampleInputtelepon1" placeholder="number" required>
-    </div>
     <div class="text-end" style="margin-top: 30px;">
     <!-- Button trigger modal -->
     <button type="button" class="btn btn-primary text-white"  data-bs-toggle="modal" data-bs-target="#exampleModal">kembali</button>
@@ -81,7 +101,7 @@ $id=$_GET['id'];
         </div>
       </div>
     </div>
-      <button name="add" type="submit" class="btn btn-primary text-white">Pesan sekarang</button>
+      <a href=""><button name="add" type="submit" class="btn btn-primary text-white">Pesan sekarang</button></a>
 </form>
 <!--- awal forms -->
 

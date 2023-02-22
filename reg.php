@@ -28,6 +28,7 @@
                 <input type="password" class="form-control border border-secondary" placeholder="password" name="password" aria-describedby="basic-addon2">
             </div>
             <div class="text-end">
+              <a href="login.php">Log in</a>
               <a href="login.php"><button type="submit" class="btn btn-primary" name="kirim">submit</button></a>
             </div>
         </div>
