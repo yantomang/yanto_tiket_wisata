@@ -59,9 +59,11 @@ while($data = mysqli_fetch_array($edit)){
         $update = $conn->query("UPDATE  tambah_data_wisata SET Nama_wisata='$Nama_wisata', deskripsi='$deskripsi', harga='$harga', gambar='$nama_gambar' WHERE id='$id'");
         if($update){
             move_uploaded_file($file_tmp, '../img/'.$nama_gambar);
-           exit( header('location:index.php?page=tabel'));
+            header('location:index.php?page=tabel');
         }
     }
+
+
 
     ?>
    

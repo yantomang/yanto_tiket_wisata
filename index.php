@@ -14,7 +14,6 @@ include "user/bot.php";
       <h4 class="text-white"><i class="bi bi-amd"></i> Go Bandung</h4>
       <div class="text-end">
         <a href="login.php"><button type="button" class="btn btn-info" style="background: transparent; color: white;">LOGIN</button></a>
-        <a href="reg.php"><button type="button" class="btn btn-info" style="background: transparent; color: white;">REGISTER</button></a>
       </div>
     </a>
   </div>

@@ -42,7 +42,7 @@ include "bot.php";
                                 <td><?php echo $data["harga"]?></td>
                                 <td><div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault"></label>
+                                    <label class="form-check-label" for="flexCheckDefault">komfirmasi</label>
                                 </div></td>
 
                             

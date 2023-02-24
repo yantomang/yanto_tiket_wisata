@@ -2,7 +2,7 @@
 $servernanme = "localhost:3306";
 $username = "root";
 $password = "";
-$database = "belajar";
+$database = "yanto_tiket_wisata";
 
 
 $conn = new mysqli($servernanme, $username, $password, $database);
