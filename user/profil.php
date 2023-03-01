@@ -20,11 +20,17 @@ include "bot.php";
     <div class="container text-white">
         <div class="icon" style=" margin-top: 10px;">
             <a href="home.php"><i class="bi bi-arrow-left text-white"></i></a>
-            <a href=""><div class="text-end" style="margin-top: -20px;"><i class="bi bi-three-dots text-white"></i></div></a>
+            <div class="dropdown" data-bs-toggle="dropdown" style="margin-left: 65rem;">
+            <div class="text-end" style="margin-top: -20px;"><i class="bi bi-three-dots text-white"></i></div>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="biodata.php">Biodata</a></li>
+                    <li><a class="dropdown-item" href="proses_logout.php">logout</a></li>
+                </ul>
+            </div>
         </div>
         <div class="text-center">
-            <img width="200 rem" height="200 rem"style="border-radius: 100px; margin-top: 25px;" src="../img/bg5.jpg" alt="">
-                <h4><?php echo $data["user_name"]?></h4>
+            <img width="200 rem" height="200 rem" class="border border-dark" style="border-radius: 100px; margin-top: 25px;" src="../img/bg8.jpg" alt="">
+                <h4 class="mt-5"><?php echo $data["user_name"]?></h4>
                 <h6><?php echo $data["email"]?></h6>
         </div>
         <?php

@@ -28,13 +28,10 @@ include "bot.php";
         <li class="nav-item">
           <a class="nav-link text-white" href="#about">About</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link active text-danger" aria-current="page" a href="proses_logout.php">Logout <i class="bi bi-box-arrow-right"></i></a>
-        </li>
       </ul>
     </div>
         <li class="nav-item" style=" margin-left: 30px;">
-        <a href="profil.php"><img width="40 rem" height="40 rem"style="border-radius: 50px; margin-left: -30px;" src="../img/bg5.jpg" alt=""></a>
+        <a href="profil.php"><img width="40 rem" height="40 rem"style="border-radius: 50px; margin-left: -30px;" src="../img/bg8.jpg" alt=""></a>
         </li>
   </div>
 </nav>

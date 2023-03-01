@@ -31,22 +31,19 @@ $id=$_GET['id'];
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link active text-white" aria-current="page" href="#home">Home</a>
+          <a class="nav-link active text-white" aria-current="page" href="home.php#home">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="#paket wisata">Paket Wisata</a>
+          <a class="nav-link text-white" href="home.php#paket wisata">Paket Wisata</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="#Akomodasi">Akomodasi</a>
+          <a class="nav-link text-white" href="home.php#Akomodasi">Akomodasi</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="#galeri">Galeri</a>
+          <a class="nav-link text-white" href="home.php#galeri">Galeri</a>
         </li>   
         <li class="nav-item">
-          <a class="nav-link text-white" href="#about">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active text-danger" aria-current="page" a href="proses_logout.php">Logout <i class="bi bi-box-arrow-right"></i></a>
+          <a class="nav-link text-white" href="home.php#about">About</a>
         </li>
       </ul>
     </div>
@@ -69,12 +66,12 @@ $id=$_GET['id'];
     <h2 class="text-center">Pesan tiket</h2>
       <img src="../img/<?php echo $data['gambar']?>" alt="" style="width: 25rem; height: 10rem; padding: 10px; border-radius: 20px;">
                   <?php
-                    $pesan=$conn->query("select Nama_wisata,harga from tambah_data_wisata where id='$id'");
+                    $pesan=$conn->query("select nama_wisata,harga from tambah_data_wisata where id='$id'");
                     $p=$pesan->fetch_array();
                   ?>
-                    <h3> <?=$p['Nama_wisata'] ?></h3>
+                    <h3 name="nama_wisata"><?=$p['nama_wisata'] ?></h3>
 
-                    <h4>Rp.<?php echo $p['harga'] ?></h4>
+                    <h4 name="harga">Rp.<?php echo $p['harga'] ?></h4>
                     
       <div class="mb-2">
           <label for="exampleInputjumlah1" class="form-label">Jumlah tiket</label>
