@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 01 Mar 2023 pada 07.44
--- Versi server: 10.3.16-MariaDB
--- Versi PHP: 7.3.7
+-- Generation Time: Mar 07, 2023 at 03:03 AM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -25,31 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `login`
---
-
-CREATE TABLE `login` (
-  `id` int(11) NOT NULL,
-  `user_name` varchar(25) NOT NULL,
-  `email` varchar(50) NOT NULL,
-  `password` varchar(35) NOT NULL,
-  `level` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data untuk tabel `login`
---
-
-INSERT INTO `login` (`id`, `user_name`, `email`, `password`, `level`) VALUES
-(23, 'sandi', 'sandi@gmail.com', 'ac9b4e0b6a21758534db2a6324d34a54', 'user'),
-(24, 'admin', 'admin', '0cc175b9c0f1b6a831c399e269772661', 'admin'),
-(25, 'ujang', 'ujang@gmail.com', 'c959810f01adc10791f46e1b3ecab45a', 'user'),
-(26, 'rendi', 'rendi@gmail.com', 'd209fc47646bba5e5fdc3d3bbaad4b9c', 'user');
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `tambah_data_wisata`
+-- Table structure for table `tambah_data_wisata`
 --
 
 CREATE TABLE `tambah_data_wisata` (
@@ -61,7 +36,7 @@ CREATE TABLE `tambah_data_wisata` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tambah_data_wisata`
+-- Dumping data for table `tambah_data_wisata`
 --
 
 INSERT INTO `tambah_data_wisata` (`id`, `Nama_wisata`, `deskripsi`, `harga`, `gambar`) VALUES
@@ -80,21 +55,21 @@ INSERT INTO `tambah_data_wisata` (`id`, `Nama_wisata`, `deskripsi`, `harga`, `ga
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tb_biodata`
+-- Table structure for table `tb_biodata`
 --
 
 CREATE TABLE `tb_biodata` (
-  `id_user` int(11) NOT NULL,
-  `username` varchar(50) NOT NULL,
-  `email` varchar(25) NOT NULL,
-  `no.tlp` varchar(25) NOT NULL
+  `id` int(11) NOT NULL,
+  `photo` text NOT NULL,
+  `user_id` varchar(25) NOT NULL,
+  `no_tlp` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tb_biodata`
+-- Dumping data for table `tb_biodata`
 --
 
-INSERT INTO `tb_biodata` (`id_user`, `username`, `email`, `no.tlp`) VALUES
+INSERT INTO `tb_biodata` (`id`, `photo`, `user_id`, `no_tlp`) VALUES
 (13, 'sandi', 'sandi@gmail.com', '0838647284'),
 (14, 'sandi', 'sandi@gmail.com', '0838647284'),
 (15, 'sandi', 'sandi@gmail.com', '0838647284');
@@ -102,110 +77,110 @@ INSERT INTO `tb_biodata` (`id_user`, `username`, `email`, `no.tlp`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tb_pemesanan`
+-- Table structure for table `tb_pemesanan`
 --
 
 CREATE TABLE `tb_pemesanan` (
   `id` int(11) NOT NULL,
-  `nama_pemesan` varchar(25) NOT NULL,
-  `email` varchar(35) NOT NULL,
-  `no_hp` varchar(12) NOT NULL,
+  `user_id` int(11) NOT NULL,
   `Tanggal_wisata` date NOT NULL,
   `jumlah_tiket` varchar(50) NOT NULL,
-  `nama_wisata` varchar(50) NOT NULL,
+  `wisata_id` int(11) NOT NULL,
   `harga` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tb_pemesanan`
+-- Dumping data for table `tb_pemesanan`
 --
 
-INSERT INTO `tb_pemesanan` (`id`, `nama_pemesan`, `email`, `no_hp`, `Tanggal_wisata`, `jumlah_tiket`, `nama_wisata`, `harga`) VALUES
-(16, '', '', '', '2023-02-23', '1', '', ''),
-(17, '', '', '', '2023-03-09', '3', '', ''),
-(18, '', '', '', '2023-03-16', '5', '', ''),
-(19, '', '', '', '2023-03-01', '-2', '', '');
+INSERT INTO `tb_pemesanan` (`id`, `user_id`, `Tanggal_wisata`, `jumlah_tiket`, `wisata_id`, `harga`) VALUES
+(16, 0, '2023-02-23', '1', 0, ''),
+(17, 0, '2023-03-09', '3', 0, ''),
+(18, 0, '2023-03-16', '5', 0, ''),
+(19, 0, '2023-03-01', '-2', 0, ''),
+(20, 25, '2023-03-22', '2', 2023, '34000'),
+(21, 25, '2023-03-23', '3', 2023, '105000'),
+(22, 25, '2023-04-01', '2', 22, '70000');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tb_user`
+-- Table structure for table `tb_user`
 --
 
 CREATE TABLE `tb_user` (
   `id` int(11) NOT NULL,
-  `username` varchar(50) NOT NULL,
+  `user_name` varchar(25) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `password` varchar(25) NOT NULL
+  `password` varchar(35) NOT NULL,
+  `level` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tb_user`
+--
+
+INSERT INTO `tb_user` (`id`, `user_name`, `email`, `password`, `level`) VALUES
+(23, 'sandi', 'sandi@gmail.com', 'ac9b4e0b6a21758534db2a6324d34a54', 'user'),
+(24, 'admin', 'admin', '0cc175b9c0f1b6a831c399e269772661', 'admin'),
+(25, 'ujang', 'ujang@gmail.com', 'c959810f01adc10791f46e1b3ecab45a', 'user'),
+(26, 'rendi', 'rendi@gmail.com', 'd209fc47646bba5e5fdc3d3bbaad4b9c', 'user');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indeks untuk tabel `login`
---
-ALTER TABLE `login`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indeks untuk tabel `tambah_data_wisata`
+-- Indexes for table `tambah_data_wisata`
 --
 ALTER TABLE `tambah_data_wisata`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `tb_biodata`
+-- Indexes for table `tb_biodata`
 --
 ALTER TABLE `tb_biodata`
-  ADD PRIMARY KEY (`id_user`);
+  ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `tb_pemesanan`
+-- Indexes for table `tb_pemesanan`
 --
 ALTER TABLE `tb_pemesanan`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `tb_user`
+-- Indexes for table `tb_user`
 --
 ALTER TABLE `tb_user`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `login`
---
-ALTER TABLE `login`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
-
---
--- AUTO_INCREMENT untuk tabel `tambah_data_wisata`
+-- AUTO_INCREMENT for table `tambah_data_wisata`
 --
 ALTER TABLE `tambah_data_wisata`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
--- AUTO_INCREMENT untuk tabel `tb_biodata`
+-- AUTO_INCREMENT for table `tb_biodata`
 --
 ALTER TABLE `tb_biodata`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
--- AUTO_INCREMENT untuk tabel `tb_pemesanan`
+-- AUTO_INCREMENT for table `tb_pemesanan`
 --
 ALTER TABLE `tb_pemesanan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
--- AUTO_INCREMENT untuk tabel `tb_user`
+-- AUTO_INCREMENT for table `tb_user`
 --
 ALTER TABLE `tb_user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
