@@ -14,7 +14,16 @@
         <div class="container text-center">
             <h1 style="margin-top: -530px; color: white;">PAKET</h1>
             <h1 class="text-white">wisata bandung</h1>
-            <div class="text-white">-Profesional -Pengalaman -Pelayanan ramah -Mengutamakan kenyamanan -Destinasi lengkap -Lebih hemat</div>
+            <div class="card mb-3" style="max-width: 300px; margin-left: 25rem; background: transparent;">
+            <div class="card-body text-white text-center">
+                <p class="card-text">-Profesional</p>
+                <p class="card-text">-Pengalaman</p>
+                <p class="card-text">-Pelayanan ramah</p>
+                <p class="card-text">-Mengutamakan kenyamanan</p>
+                <p class="card-text">-Destinasi lengkap</p>
+                <p class="card-text">-Lebih hemat</p>
+        </div>
+        </div>
         </div>
     </div>
 </session>
@@ -27,7 +36,7 @@
     
     <!--- awal about -->
     
-    <section class="mt-5 about" id=about>
+    <section class="mt-5 about" id="about">
         <div class="container mt-5">
             <div class="row text-center">
                 <div class="col">

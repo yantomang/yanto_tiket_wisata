@@ -22,7 +22,7 @@ include "bot.php";
 
                 <?php
                         include ('koneksi.php');
-                        $query = "SELECT * FROM login";
+                        $query = "SELECT * FROM tb_user";
                         $select = $conn->query($query);
                         $no = 1;
                         while ($data = mysqli_fetch_array($select)){

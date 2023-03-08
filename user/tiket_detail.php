@@ -17,9 +17,9 @@ while ($data = mysqli_fetch_array($select)){
           </div>
             <div class="col-md-8">
                 <div class="card-body">
-                    <h3 class="card-title" style="margin-top: 6rem;"><?php echo $data["Nama_wisata"]?></h3>
-                    <h5 class="card-text">Rp.<?php echo $data["harga"]?></h5>
-                    <p class="card-text"><small class="text-muted"><?php echo $data["deskripsi"]?>  </small></p>
+                    <h1 class="card-title" style="margin-top: 6rem;"><?php echo $data["Nama_wisata"]?></h1>
+                    <h3 class="card-text" style="color: orange;">Rp.<?php echo $data["harga"]?></h3>
+                    <p class="card-text mt-4"><small class="text-muted"><?php echo $data["deskripsi"]?>  </small></p>
                       <div class="text-end">
                         <a href="home.php#paket%20wisata" class="btn btn-primary" style="margin-top: 12rem;">Kembali</a>
                         <a href="home.php?user=tiket-pesan&id=<?php echo $data['id'] ?> " class="btn btn-primary" style="margin-top: 12rem;">pesan</a>

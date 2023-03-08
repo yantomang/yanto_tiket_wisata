@@ -26,6 +26,29 @@ include "user/bot.php";
       <div class="carousel-caption d-none d-md-block">
         <h1 style="margin-top: -500px;"><marquee>WELCOME TO BANDUNG</marquee></h1>
         <p class="fs-5">hi everyone, we privode varicus kind of tour packages with the best facilities and services, and also at affordable prices. we wiil amaze you with the beauty of bandung with an unforgettable exprience.</p>
+        <div class="card mb-3 mt-5" style="max-width: 540px; height: 14rem; margin-left: -5rem;">
+        <div class="row g-0">
+            <div class="col-md-4" style="padding: 5px;">
+            <img src="img/g6.jpg" class="img-fluid rounded-start" alt="...">
+            <img src="img/g8.jpg" class="img-fluid rounded-start mt-3" alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body text-dark">
+                    <h3 class="card-title">"Rekomendasi wisata baru di bandung yang wajib kamu kunjungi saat berlibur ke kota bandung"</h3>
+                </div>
+            </div>
+            <div class="card mb-3" style="max-width: 300px; margin-left: 58rem; margin-top:-9rem;">
+            <div class="card-body text-dark text-center bg-info">
+                <h5 class="card-title">Paket wisata bandung</h5>
+                <p class="card-text">-Profesional</p>
+                <p class="card-text">-Pengalaman</p>
+                <p class="card-text">-Pelayanan ramah</p>
+                <p class="card-text">-Mengutamakan kenyamanan</p>
+                <p class="card-text">-Destinasi lengkap</p>
+                <p class="card-text">-Lebih hemat</p>
+        </div>
+        </div>
+        </div>
       </div>
     </div>
   </div>

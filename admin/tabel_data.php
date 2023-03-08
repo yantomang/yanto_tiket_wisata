@@ -31,8 +31,8 @@
                         <td><?php echo $data["harga"]?></td>
                         <td><img width="70" src="../img/<?php echo $data['gambar']?>" alt=""></td>
                         <td>
-                            <a href="index.php?page=edit-data&id=<?php echo $data ['id']?>" class="btn btn-warning">edit</a>
-                            <a href="proses_delete.php?id=<?php echo $data['id']?>" class="btn btn-danger">delete</a>
+                            <a href="index.php?page=edit-data&id=<?php echo $data ['id']?>" class="btn btn-warning"><i class="bi bi-pencil-fill"></i></a>
+                            <a href="proses_delete.php?id=<?php echo $data['id']?>" class="btn btn-danger"><i class="bi bi-trash-fill"></i></a>
                         </td>
                     </tr>
                     <?php

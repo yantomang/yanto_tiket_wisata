@@ -14,19 +14,19 @@ include "bot.php";
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link active text-white" aria-current="page" href="#home">Home</a>
+          <a class="nav-link active text-white" aria-current="page" href="home.php#home">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="#paket wisata">Paket Wisata</a>
+          <a class="nav-link text-white" href="home.php#paket%20wisata">Paket Wisata</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="#Akomodasi">Akomodasi</a>
+          <a class="nav-link text-white" href="home.php#Akomodasi">Akomodasi</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="#galeri">Galeri</a>
+          <a class="nav-link text-white" href="home.php#galeri">Galeri</a>
         </li>   
         <li class="nav-item">
-          <a class="nav-link text-white" href="#about">About</a>
+          <a class="nav-link text-white" href="home.php#about">About</a>
         </li>
       </ul>
     </div>
@@ -56,6 +56,7 @@ include "bot.php";
         include "beranda.php";
     }
   ?>
+  
 
 
 
