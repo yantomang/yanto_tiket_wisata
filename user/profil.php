@@ -1,32 +1,18 @@
-<?php
-
-include "bot.php";
-
-?>
+<?php include "bot.php"; ?>
 
 <body style="background-color:#474E68;">
     
-
-
-<?php
-    include ('koneksi.php');
-    $query = "SELECT * FROM tb_user";
-    $select = $conn->query($query);
-    $no = 1;
-    while ($data = mysqli_fetch_array($select)){
-?>
 
 <div class="profil">
     <div class="container text-white">
         <div class="text-start mt-3">
             <a href="home.php"><i class="bi bi-arrow-left text-white"></i></a>
-                <div class="text-end">
-                    <a href="proses_logout.php"><button type="button" class="btn btn-danger" href="">logout <i class="bi bi-box-arrow-right"></i></button></a> 
-                </div>
+            <div class="text-end">
+                <a href="proses_logout.php"><button type="button" class="btn btn-danger" href="">logout <i class="bi bi-box-arrow-right"></i></button></a> 
+            </div>
+        </div>
         <div class="text-center">
             <img width="200 rem" height="200 rem" class="border border-dark" style="border-radius: 100px; margin-top: 25px;" src="../img/bg8.jpg" alt="">
-                <h4><?php echo $data["user_name"]?></h4>
-                <h6><?php echo $data["email"]?></h6>
         </div>
 
 
@@ -55,28 +41,31 @@ include "bot.php";
 
                     ?>
 
-<div class="container">
-    <form  action="" method="post" class="border border-secondary" style="width: 40rem; padding: 3rem; border-radius: 1rem;">
-        <div class="text-center">
-        <h5>isi data diri</h5>
-        </div>
-        <div class="mb-3">
-            <label for="exampleInputnama1" class="form-label">Nama</label>
-            <input type="text" name="nama" class="form-control border border-secondary" id="exampleInputnama1">
-        </div>
-        <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email</label>
-            <input type="email" name="email" class="form-control border border-secondary" id="exampleInputEmail1" aria-describedby="emailHelp">
-        </div>
-        <div class="mb-3">
-            <label for="exampleInputno.tlp1" class="form-label">No.tlp</label>
-            <input type="text" name="no_tlp" class="form-control border border-secondary" id="exampleInputno.tlp1">
-        </div>
-        <div class="text-end">
-            <button type="submit" class="btn btn-primary" name="simpan">Submit</button>
-        </div>
-    </form>
-</div>
+            <div class="container">
+                <form  action="" method="post" class="border border-secondary" style="width: 40rem; padding: 3rem; border-radius: 1rem;">
+                    <div class="text-center">
+                    <h5>isi data diri</h5>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputnama1" class="form-label">Nama</label>
+                        <input type="text" name="nama" class="form-control border border-secondary" id="exampleInputnama1">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email</label>
+                        <input type="email" name="email" class="form-control border border-secondary" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputno.tlp1" class="form-label">No.tlp</label>
+                        <input type="text" name="no_tlp" class="form-control border border-secondary" id="exampleInputno.tlp1">
+                    </div>
+                    <div class="text-end">
+                        <button type="submit" class="btn btn-primary" name="simpan">Submit</button>
+                    </div>
+                </form>
+            </div>
+            <div class="tab-pane" id="pesanan">
+                sssssssssssssss
+            </div>
 
 <div class="container mt-5">
     <table class="border border-secondary" style="width: 30rem; margin-left: 45rem; margin-top: -29rem;">
@@ -103,7 +92,7 @@ include "bot.php";
                     <td><?php echo $data["no_tlp"]?></td>
                 </tr>
             </tbody>
-        <?php}?>
+        
     </table>
 </div>
         </div>

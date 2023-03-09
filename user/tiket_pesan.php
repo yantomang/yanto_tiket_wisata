@@ -26,7 +26,7 @@ $id=$_GET['id'];
 
 
 <?php
-      $pesan=$conn->query("select nama_wisata,harga,gambar from tambah_data_wisata where id='$id'");
+      $pesan=$conn->query("select id, nama_wisata,harga,gambar from tambah_data_wisata where id='$id'");
       $p=$pesan->fetch_array();
   ?>
 <!--- awal forms -->
@@ -34,9 +34,11 @@ $id=$_GET['id'];
       <img src="../img/<?php echo $p["gambar"]?>" alt="" style="width: 29rem; height: 15rem; padding: 0px; border-radius: 20px;">              
         <div class="mb-0">
           <input type="" name="nama_wisata" class="form-control border border-light" style="font-size: 35px; margin-left: -10px;" value="<?=$p['nama_wisata']?>">
+          <input type="hidden" name="user_id" class="form-control border border-light" style="font-size: 35px; margin-left: -10px;" value="<?=$_SESSION["id"]?>">
+          <input type="hidden" name="wisata_id" class="form-control border border-light" style="font-size: 35px; margin-left: -10px;" value="<?=$id?>">
         </div>
         <div class="mb-2">
-          <input type="" name="harga" class="form-control border border-light" style="font-size: 30px; margin-top: -10px;" value="Rp. <?php echo $p['harga']?>">
+          <input type="" name="harga" class="form-control border border-light" style="font-size: 30px; margin-top: -10px;" value="<?php echo $p['harga']?>">
         </div>   
         <div class="mb-2">
           <label for="exampleInputjumlah1" class="form-label">Jumlah tiket</label>
