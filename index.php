@@ -26,19 +26,19 @@ include "user/bot.php";
       <div class="carousel-caption d-none d-md-block">
         <h1 style="margin-top: -500px;"><marquee>WELCOME TO BANDUNG</marquee></h1>
         <p class="fs-5">hi everyone, we privode varicus kind of tour packages with the best facilities and services, and also at affordable prices. we wiil amaze you with the beauty of bandung with an unforgettable exprience.</p>
-        <div class="card mb-3 mt-5" style="max-width: 540px; height: 14rem; margin-left: -5rem;">
+        <div class="card mb-3 mt-5" style="max-width: 540px; height: 14rem; margin-left: -12rem; background: radial-gradient(circle, rgba(23,92,201,1) 13%, rgba(3,9,65,1) 100%);">
         <div class="row g-0">
             <div class="col-md-4" style="padding: 5px;">
             <img src="img/g6.jpg" class="img-fluid rounded-start" alt="...">
             <img src="img/g8.jpg" class="img-fluid rounded-start mt-3" alt="...">
             </div>
             <div class="col-md-8">
-                <div class="card-body text-dark">
+                <div class="card-body text-dark text-white">
                     <h3 class="card-title">"Rekomendasi wisata baru di bandung yang wajib kamu kunjungi saat berlibur ke kota bandung"</h3>
                 </div>
             </div>
-            <div class="card mb-3" style="max-width: 300px; margin-left: 58rem; margin-top:-9rem;">
-            <div class="card-body text-dark text-center bg-info">
+            <div class="card mb-3" style="max-width: 300px; margin-left: 65rem; margin-top:-9rem;">
+            <div class="card-body text-dark text-center text-white border border-primary" style="background: radial-gradient(circle, rgba(23,92,201,1) 13%, rgba(3,9,65,1) 100%);">
                 <h5 class="card-title">Paket wisata bandung</h5>
                 <p class="card-text">-Profesional</p>
                 <p class="card-text">-Pengalaman</p>
@@ -91,8 +91,8 @@ include "user/bot.php";
                 ?>
                 <a href="login.php" style="text-decoration: none;">
                     <div class="col mt-5">
-                      <div class="card" style="width: 250px; height: 350px; border-color: white;">
-                      <img width="248 rem" height="200 rem"style="border-radius: 5px;" src="img/<?php echo $data['gambar']?>" alt="">
+                      <div class="card" style="width: 250px; height: 330px; border-color: secondary;">
+                      <img width="248 rem" height="200 rem"style="border-radius: 5px; padding:2px;" src="img/<?php echo $data['gambar']?>" alt="">
                         <div class="card-body text-black">
                           <h5 class="card-title"><?php echo $data["Nama_wisata"]?></h5>
                           <h3 class="text-start"  style="color: orange;">Rp. <?php echo $data["harga"]?></h3>

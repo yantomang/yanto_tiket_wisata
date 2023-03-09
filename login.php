@@ -2,7 +2,7 @@
 
 ?>
 
-<body background="img/bg9.jpg" style="background-repeat: no-repeat; background-size:  100%;">
+<body background="img/bg9.jpg" style="background: radial-gradient(circle, rgba(0,0,120,1) -10%, rgba(1,4,38,1) 99%);">
   
 </body>
 
