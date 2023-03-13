@@ -21,7 +21,7 @@ $id=$_GET['id'];
     }
 ?>
 
-<body background="../img/bg9.jpg" style="background-repeat: no-repeat; background-size: 100%;">
+<body background="../img/bg2.jpeg">
 
 
 

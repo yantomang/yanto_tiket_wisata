@@ -22,23 +22,23 @@ include "user/bot.php";
 <div id="carouselExampleCaptions" class="carousel slide">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="img/bg9.jpg" class="d-block w-100" alt="..." style="height: 625px;">
+      <img src="img/bg1.jpg" class="d-block w-100" alt="..." style="height: 625px;">
       <div class="carousel-caption d-none d-md-block">
         <h1 style="margin-top: -500px;"><marquee>WELCOME TO BANDUNG</marquee></h1>
         <p class="fs-5">hi everyone, we privode varicus kind of tour packages with the best facilities and services, and also at affordable prices. we wiil amaze you with the beauty of bandung with an unforgettable exprience.</p>
-        <div class="card mb-3 mt-5" style="max-width: 540px; height: 14rem; margin-left: -12rem; background: radial-gradient(circle, rgba(23,92,201,1) 13%, rgba(3,9,65,1) 100%);">
+        <div class="card mb-3 mt-5 border border-light" style="max-width: 540px; height: 14rem; margin-left: -12rem; background:transparent;">
         <div class="row g-0">
             <div class="col-md-4" style="padding: 5px;">
             <img src="img/g6.jpg" class="img-fluid rounded-start" alt="...">
-            <img src="img/g8.jpg" class="img-fluid rounded-start mt-3" alt="...">
+            <img src="img/g5.jpg" class="img-fluid rounded-start mt-3" alt="...">
             </div>
             <div class="col-md-8">
-                <div class="card-body text-dark text-white">
+                <div class="card-body text-white">
                     <h3 class="card-title">"Rekomendasi wisata baru di bandung yang wajib kamu kunjungi saat berlibur ke kota bandung"</h3>
                 </div>
             </div>
-            <div class="card mb-3" style="max-width: 300px; margin-left: 65rem; margin-top:-9rem;">
-            <div class="card-body text-dark text-center text-white border border-primary" style="background: radial-gradient(circle, rgba(23,92,201,1) 13%, rgba(3,9,65,1) 100%);">
+            <div class="card mb-3" style="max-width: 300px; margin-left: 64rem; margin-top:-9rem; background:transparent;">
+            <div class="card-body text-dark text-center text-white border border-light">
                 <h5 class="card-title">Paket wisata bandung</h5>
                 <p class="card-text">-Profesional</p>
                 <p class="card-text">-Pengalaman</p>

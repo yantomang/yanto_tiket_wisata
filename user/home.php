@@ -31,7 +31,7 @@ include "bot.php";
       </ul>
     </div>
         <li class="nav-item" style=" margin-left: 30px;">
-        <a href="profil.php"><img width="40 rem" height="40 rem"style="border-radius: 50px; margin-left: -30px;" src="../img/bg8.jpg" alt=""></a>
+        <a href="profil.php"><img width="40 rem" height="40 rem"style="border-radius: 50px; margin-left: -30px;" src="../img/g3.jpg" alt=""></a>
         </li>
   </div>
 </nav>

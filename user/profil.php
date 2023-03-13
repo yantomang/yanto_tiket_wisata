@@ -14,41 +14,62 @@ include "bot.php";
         </form>
     </nav>
         <div class="text-center text-white mt-5">
-            <img width="200 rem" height="200 rem" class="border border-dark" style="border-radius: 100px; margin-top: 25px;" src="../img/bg8.jpg" alt="">
+            <img width="200 rem" height="200 rem" class="border border-dark" style="border-radius: 100px; margin-top: 25px;" src="../img/g2.jpg" alt="">
             <h2><?php echo $_SESSION['email']; ?></h2>
-            <h3><?php echo $_SESSION['name']; ?></h3>
         </div>
 
-
+        <div class="container">
         <ul class="nav nav-tabs mt-5">
-            <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#biodata"  style="background: white; color: purple; text-decoration: none; border: 3px solid purple; margin-right: 1rem; padding-left: 1rem; padding-right: 1rem;">biodata</a></li>
             <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#pesanan" style="background: white; color: purple; border: 3px solid purple; margin-right: 1rem; padding-left: 1rem; padding-right: 1rem;">pesanan saya</a></li>
         </ul>
-        <div class="tab-content">
-            <div class="tab-pane active" id="biodata">
-                <div class="row border g-0 rounded shadow-sm">
-                    <div class="col p-4" style="height: 24rem;">
-                        <form>
-                            <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                            </div>
-                            <div class="mb-3">
-                                <label for="exampleInputPassword1" class="form-label">Password</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1">
-                            </div>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
+        <div class="tab-content" style="background: grey;">
         <div class="tab-pane active" id="pesanan">
             <div class="row  border g-0 rounded shadow-sm">
-                <div class="col p-4" style="height: 24rem;">pesanan</div>
+                <div class="col p-3" style="height: 22rem;">
+                    <table class="text-white">
+                        <tbody>
+                        <?php
+                        include ('koneksi.php');
+
+                    ?>
+                    <?php
+                                $query = "SELECT tb_user.id, tb_user.user_name, tb_user.email, tb_pemesanan.id, tb_pemesanan.Tanggal_wisata, tambah_data_wisata.Nama_wisata, tb_pemesanan.jumlah_tiket, tb_pemesanan.wisata_id, tb_pemesanan.harga FROM tb_pemesanan INNER JOIN tb_user ON tb_user.id=tb_pemesanan.user_id INNER JOIN tambah_data_wisata ON tb_pemesanan.wisata_id=tambah_data_wisata.id";
+                                $select = $conn->query($query);
+                                while ($data = mysqli_fetch_array($select)){
+                                    ?>
+                               
+                            <tr>
+                                <th scope="row">Nama :</th>
+                                <td><?php echo $data["user_name"]?></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Email :</th>
+                                <td><?php echo $data["email"]?></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Nama wisata :</th>
+                                <td colspan="2"><?php echo $data["Nama_wisata"]?></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Tanggal wisata :</th>
+                                <td colspan="2"><?php echo $data["Tanggal_wisata"]?></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Jumlah tiket :</th>
+                                <td colspan="2"><?php echo $data["jumlah_tiket"]?></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Harga :</th>
+                                <td class="text-end"><?php echo $data["harga"]?></td>
+                            </tr>
+                            <?php } ?>
+                        </tbody>
+                    </table>
+                </div>
+                </div>
             </div>
         </div>
-        </div>
+    </div>
     </div>
 </div>
 

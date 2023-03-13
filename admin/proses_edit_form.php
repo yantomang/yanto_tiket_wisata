@@ -1,4 +1,5 @@
 <?php
+ob_start ();
     include 'koneksi.php';
 
     $id = $_GET['id'];
@@ -35,7 +36,7 @@ while($data = mysqli_fetch_array($edit)){
                  <label for="formFile" class="form-label">Foto :</label>
                 <input type="file" name="gambar" class="form-control" value=""><br>
                 <div class="text-end">
-            <input type="submit" class="btn btn-primary" name="edit" id="edit"><br><br>
+           <a href="index.php?page=tabel"><input type="submit" class="btn btn-primary" name="edit" id="edit"></a><br><br>
             </div>
         </form>
     </div>
@@ -60,6 +61,7 @@ while($data = mysqli_fetch_array($edit)){
         if($update){
             move_uploaded_file($file_tmp, '../img/'.$nama_gambar);
             header('location:index.php?page=tabel');
+            ob_end_flush();
         }
     }
 

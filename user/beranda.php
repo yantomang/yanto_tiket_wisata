@@ -5,7 +5,7 @@
 
 <session id="home">
     <div class="card text-bg-light">
-        <img src="../img/bg9.jpg" class="card-img" alt="..." style="height: 650px;">
+        <img src="../img/bg1.jpg" class="card-img" alt="..." style="height: 650px;">
     <div class="card-img-overlay text-center text-white">
             <div class="container">
                 <h5 class="mt-5"><marquee>Selamat Datang!! <?php echo $_SESSION['email']; ?></marquee></h5>
@@ -14,7 +14,7 @@
         <div class="container text-center">
             <h1 style="margin-top: -530px; color: white;">PAKET</h1>
             <h1 class="text-white">wisata bandung</h1>
-            <div class="card mb-3" style="max-width: 300px; margin-left: 25rem; background: transparent;">
+            <div class="card mb-3 border border-transparent" style="max-width: 300px; margin-left: 25rem; background: transparent;">
             <div class="card-body text-white text-center">
                 <p class="card-text">-Profesional</p>
                 <p class="card-text">-Pengalaman</p>

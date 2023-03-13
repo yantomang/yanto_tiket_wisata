@@ -8,13 +8,12 @@ include "bot.php";
 <h2 class="text-center">Table Pesanan</h2><br>
     <div class="row">
         <div class="col-md-12">
-            <table id="" class="table table-striped tabel-bordered" cellspacing="0" width="100%">
+            <table id="myTable" class="table table-striped tabel-bordered" cellspacing="0" width="100%">
                 <thead>
                     <tr>
                         <th>No</th>
                         <th>Nama pemesan</th>
                         <th>email</th>
-                        <th>no.hp</th>
                         <th>Tanggal Wisata</th>
                         <th>Jumlah Tiket</th>
                         <th>Nama Wisata</th>
@@ -25,7 +24,7 @@ include "bot.php";
                 <tbody>
                 <?php
                         include ('koneksi.php');
-                        $query = "SELECT * FROM tb_pemesanan";
+                        $query = "SELECT tb_user.id, tb_user.user_name, tb_user.email, tb_pemesanan.id, tb_pemesanan.Tanggal_wisata, tambah_data_wisata.Nama_wisata, tb_pemesanan.jumlah_tiket, tb_pemesanan.wisata_id, tb_pemesanan.harga FROM tb_pemesanan INNER JOIN tb_user ON tb_user.id=tb_pemesanan.user_id INNER JOIN tambah_data_wisata ON tb_pemesanan.wisata_id=tambah_data_wisata.id";
                         $select = $conn->query($query);
                         $no = 1;
                         while ($data = mysqli_fetch_array($select)){
@@ -33,12 +32,11 @@ include "bot.php";
                     <tr>
                     
                                 <td><?php echo $no++ ?></td>
-                                <td><?php echo $data["nama_pemesan"]?></td>
+                                <td><?php echo $data["user_name"]?></td>
                                 <td><?php echo $data["email"]?></td>
-                                <td><?php echo $data["no_hp"]?></td>
                                 <td><?php echo $data["Tanggal_wisata"]?></td>
                                 <td><?php echo $data["jumlah_tiket"]?></td>
-                                <td><?php echo $data["nama_wisata"]?></td>
+                                <td><?php echo $data["Nama_wisata"]?></td>
                                 <td><?php echo $data["harga"]?></td>
                                 <td><div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
