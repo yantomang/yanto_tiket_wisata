@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 08 Mar 2023 pada 06.57
+-- Waktu pembuatan: 14 Mar 2023 pada 03.12
 -- Versi server: 10.3.16-MariaDB
 -- Versi PHP: 7.3.7
 
@@ -41,22 +41,13 @@ CREATE TABLE `tambah_data_wisata` (
 --
 
 INSERT INTO `tambah_data_wisata` (`id`, `Nama_wisata`, `deskripsi`, `harga`, `gambar`) VALUES
-(31, 'Gunung putri lembang', 'Untuk melihat sunrise di sekitar Bandung, rasanya enggak ada destinasi wisata yang lebih baik daripada . Lokasinya enggak jauh dari kota, tepatnya di Lembang, Kabupaten Bandung Barat, Jawa Barat. Pendakian ke puncaknya pun enggak makan banyak waktu, cuma 30 menit. Meski begitu, semua pengunjung akan mendapatkan pemandangan matahari terbit yang indah dari sana.', '386000', 'g36.jpg'),
-(32, 'Sanghyang Heuleut', 'Terletak di Rajamandala Kulon, Cipatat, Kabupaten Bandung Barat, Sanghyang Heuleut merupakan danau hijau memesona dikelilingi batu-batu kali yang eksotis. Saking cantiknya, tempat ini sampai disebut kolam bidadari.Sanghyang Heuleut merupakan tempat wisata Bandung yang cocok untuk mandi dan berfoto. Bagi yang hobi menguji nyali, silakan melompat dari salah satu batu yang tingginya lebih dari 5 meter. Hati-hati buat yang kurang jago berenang.', '100000', 'g37.jpg');
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `tb_biodata`
---
-
-CREATE TABLE `tb_biodata` (
-  `id` int(11) NOT NULL,
-  `username` text NOT NULL,
-  `email` varchar(25) NOT NULL,
-  `user_id` varchar(25) NOT NULL,
-  `no_tlp` varchar(25) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+(35, 'Dusun Bambu', 'Dusun Bambu cocok sekali menjadi tujuan wisata keluarga di Bandung. Di Dusun Bambu terdapat area playground anak, ruang terbuka yang indah, dan taman.  Ada juga restoran, cafe, dan pujasera dengan berbagai pilihan kuliner. Mau menginap? ada villa dan glamping juga disini. Tempat liburan di Bandung yang satu ini bisa anda jadikan tempat bersantai keluarga.', '35000', 'g1.jpeg'),
+(36, 'Floating Market Lembang', 'Floating Market Lembang cukup terkenal sebagai tempat rekreasi di Bandung. Areanya cukup luas, dengan banyak pilihan wahana permainan.  Selain itu, terdapat area kuliner yang cukup unik. Semua pedagang menjajakan makanan dari perahu. Dari sini juga nama Floating Market berasal. Sebagian besar area Floating market berada di luar ruangan. Jadi faktor cuaca cukup berpengaruh.', '30000', 'g2.jpg'),
+(37, 'Kawah Tangkuban Perahu', 'Secara administrasi, Gunung Tangkuban Perahu masuk ke wilayah Subang sebenarnya. Tapi, dekat sekali dari Lembang, sehingga sering disebut berada di Lembang. Dari wilayah Bandung, bentuknya memang mirip perahu terbalik.  Tangkuban Perahu termasuk tempat wisata alam Bandung yang terkenal. Daya tarik utamanya berupa kawah yang bisa dijangkau langsung tanpa harus berjalan jauh.  Ada dua kawah utama yang terkenal. Kawah Ratu (kawah utama), dan kawah Domas (harus trekking rada jauh).', '20000', 'g3.jpg'),
+(38, 'Orchid Forest', 'Salah satu tempat hits di Bandung nih. Orchid Forest Cikole merupakan tempat ngadem di Lembang, piknik, sekaligus budidaya anggrek yang keren banget.  Di sini terdapat banyak tempat berfoto yang epic. Pastinya bakal nge hits kalau di upload ke medsos. Selain itu juga, terdapat berbagai koleksi anggrek yang indah. Koleksi anggrek di Orchid Forest Cikole termasuk yang terbesar di Indonesia lho.  Tempat ini berada di Cikole. Arahkan kendaraan ke arah Tangkuban Perahu, nanti sebelumnya akan melewati tempat ini.', '40000', 'g4.jpg'),
+(39, 'Sanghyang Heuleut', 'Satu tempat eksotis yang menyimpan peninggalan purba di Bandung; Sanghyang Heuleut. Konon, Sangyang Heuleut merupakan peninggalan alam dari danau purba. Danau purba ini melingkupi area Bandung di jaman dulu kala.  Sekarang, tempat ini jadi salah satu tujuan wisata alam alternatif. Asyik juga, kita bisa menikmati alam sambil melihat peninggalan geologis dataran Bandung disini.', '20000', 'g5.jpg'),
+(40, 'Rabbit Town Bandung', 'Satu lagi tempat wisata keluarga di Bandung; Rabbit Town. Lokasinya berada di area Ciumbuleuit, dan tidak terlalu jauh dari pusat kota.  Disini, anda bisa menikmati berbagai spot unik dan bagus untuk berfoto. Selain itu, terdapat juga beberapa permainan yang cocok untuk anak-anak.', '35000', 'g6.jpg'),
+(41, 'Amazing Art World', 'Amazing Art World terletak di kawasan Setia Budhi, tidak jauh dari kampus UPI. Di sini, anda bisa menikmati lukisan dan ruangan dengan konsep 3D.  Keren banget untuk berfoto. Seolah-olah anda masuk dan berada menyatu dengan lukisan yang ada.', '35000', 'g7.jpg');
 
 -- --------------------------------------------------------
 
@@ -78,8 +69,9 @@ CREATE TABLE `tb_pemesanan` (
 --
 
 INSERT INTO `tb_pemesanan` (`id`, `user_id`, `Tanggal_wisata`, `jumlah_tiket`, `wisata_id`, `harga`) VALUES
-(23, 25, '2023-03-23', '2', 17, '34000'),
-(24, 25, '2023-03-08', '2', 31, '772000');
+(26, 28, '2023-03-20', '1', 35, '35000'),
+(27, 28, '2023-03-22', '2', 36, '60000'),
+(28, 29, '2023-03-15', '3', 38, '120000');
 
 -- --------------------------------------------------------
 
@@ -101,7 +93,9 @@ CREATE TABLE `tb_user` (
 
 INSERT INTO `tb_user` (`id`, `user_name`, `email`, `password`, `level`) VALUES
 (24, 'admin', 'admin', '0cc175b9c0f1b6a831c399e269772661', 'admin'),
-(25, 'ujang', 'ujang@gmail.com', 'c959810f01adc10791f46e1b3ecab45a', 'user');
+(25, 'ujang', 'ujang@gmail.com', 'c959810f01adc10791f46e1b3ecab45a', 'user'),
+(27, 'sandi', 'sandi@gmail.com', 'ac9b4e0b6a21758534db2a6324d34a54', 'user'),
+(29, 'user', 'user@gmail.com', '827ccb0eea8a706c4c34a16891f84e7b', 'user');
 
 --
 -- Indexes for dumped tables
@@ -111,12 +105,6 @@ INSERT INTO `tb_user` (`id`, `user_name`, `email`, `password`, `level`) VALUES
 -- Indeks untuk tabel `tambah_data_wisata`
 --
 ALTER TABLE `tambah_data_wisata`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indeks untuk tabel `tb_biodata`
---
-ALTER TABLE `tb_biodata`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -139,25 +127,19 @@ ALTER TABLE `tb_user`
 -- AUTO_INCREMENT untuk tabel `tambah_data_wisata`
 --
 ALTER TABLE `tambah_data_wisata`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
-
---
--- AUTO_INCREMENT untuk tabel `tb_biodata`
---
-ALTER TABLE `tb_biodata`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_pemesanan`
 --
 ALTER TABLE `tb_pemesanan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_user`
 --
 ALTER TABLE `tb_user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

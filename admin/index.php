@@ -10,8 +10,8 @@ include "bot.php";
             <h2 class="text-white text-center">Halaman admin</h2>
         </div>
       </a>
-      <div class="col-md-4 text-end">
-       <a href="proses_logout.php"><button type="button" class="btn btn-danger" href="">logout <i class="bi bi-box-arrow-right"></i></button></a> 
+      <div class="col-md-4">
+       <a href="proses_logout.php"><button type="button" class="btn btn-danger" href="" style="margin-left:20rem;">logout <i class="bi bi-box-arrow-right"></i></button></a> 
       </div>
     </header>
 

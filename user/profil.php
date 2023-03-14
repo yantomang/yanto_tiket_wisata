@@ -3,7 +3,7 @@ session_start ();
 include "bot.php"; 
 ?>
 
-<body style="background-color:#474E68;">
+<body style="background-color:#474E68; height: 100%;">
     
 
 <div class="profil">
@@ -18,15 +18,14 @@ include "bot.php";
             <h2><?php echo $_SESSION['email']; ?></h2>
         </div>
 
-        <div class="container">
-        <ul class="nav nav-tabs mt-5">
-            <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#pesanan" style="background: white; color: purple; border: 3px solid purple; margin-right: 1rem; padding-left: 1rem; padding-right: 1rem;">pesanan saya</a></li>
-        </ul>
+        <div class="container mt-5">
+            <h2 class="text-white">pesanan saya</h2>
         <div class="tab-content" style="background: grey;">
         <div class="tab-pane active" id="pesanan">
             <div class="row  border g-0 rounded shadow-sm">
                 <div class="col p-3" style="height: 22rem;">
-                    <table class="text-white">
+                <div class="card border border-white" width="10rem">
+                    <table class="text-dark" style="padding: 200px;">
                         <tbody>
                         <?php
                         include ('koneksi.php');
@@ -65,6 +64,7 @@ include "bot.php";
                             <?php } ?>
                         </tbody>
                     </table>
+                    </div>  
                 </div>
                 </div>
             </div>

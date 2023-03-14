@@ -45,7 +45,7 @@ if (isset($_POST['kirim'])) {
     $email = $_POST['email'];
     $password =md5($_POST['password']);
 
-    $query = mysqli_query($conn, "INSERT INTO login VALUES ('', '$username', '$email', '$password', 'user')");
+    $query = mysqli_query($conn, "INSERT INTO tb_user VALUES ('', '$username', '$email', '$password', 'user')");
 
     if ($query) {
         header('location:login.php');

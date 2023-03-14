@@ -5,9 +5,13 @@ include "bot.php";
 
 
 <div class="container" style="margin-top: 85px; box-shadow: 0 7px 25px rgba(0, 0, 0, 0.8);  border-radius: 10px;  margin-left: 260px; width: 1095px"><br>
+<div style="margin-left: 90%;">
+<button class="btn btn-dark" onclick="printDiv('print')"><i class="bi bi-printer"></i></button>
+</div>
 <h2 class="text-center">Table Pesanan</h2><br>
     <div class="row">
         <div class="col-md-12">
+        <fieldset id="print">
             <table id="myTable" class="table table-striped tabel-bordered" cellspacing="0" width="100%">
                 <thead>
                     <tr>
@@ -49,6 +53,17 @@ include "bot.php";
                     <?php }?>
                 </tbody>
             </table>
+            </fieldset>
         </div>
     </div>
 </div>
+<script type="text/javascript">
+  function printDiv(el) {
+    var a = document.body.innerHTML;
+    var b = document.getElementById(el).innerHTML;
+
+    document.body.innerHTML = b;
+    window.print();
+    dokument.body.innerHTML = a;
+  }
+</script>
