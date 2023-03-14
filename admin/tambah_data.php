@@ -19,7 +19,7 @@
 
 
 <session id="">
-    <div class="container" style="margin-top: 85px; box-shadow: 0 7px 25px rgba(0, 0, 0, 0.8);  border-radius: 10px; margin-left:260px; width:1080px;"><br>
+    <div class="container" style="margin-top: 85px; box-shadow: 0 7px 25px rgba(0, 0, 0, 0.8);  border-radius: 10px; margin-left:260px; width:1170px;"><br>
         <h2 class="text-center">Tamabah Data Wisata</h2>
         <form action="" method="post" enctype="multipart/form-data"><br>
             <div class="form-grup">

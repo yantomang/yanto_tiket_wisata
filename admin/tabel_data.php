@@ -1,7 +1,7 @@
 <?php
     include "bot.php";
 ?>
-<div class="container" style="margin-top: 100px; box-shadow: 0 7px 25px rgba(0, 0, 0, 0.8); border-radius: 10px; margin-left: 260px; width: 1080px;"><br>
+<div class="container" style="margin-top: 100px; box-shadow: 0 7px 25px rgba(0, 0, 0, 0.8); border-radius: 10px; margin-left: 260px; width: 1150px;"><br>
     <div class="row">
         <div class="col-md-12">
             <table id="" class="table table-striped tabel-bordered" cellspacing="0" width="100%">

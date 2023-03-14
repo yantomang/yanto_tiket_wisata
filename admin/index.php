@@ -11,11 +11,11 @@ include "bot.php";
         </div>
       </a>
       <div class="col-md-4">
-       <a href="proses_logout.php"><button type="button" class="btn btn-danger" href="" style="margin-left:20rem;">logout <i class="bi bi-box-arrow-right"></i></button></a> 
+       <a href="proses_logout.php"><button type="button" class="btn btn-danger" href="" style="margin-left:23rem;">logout <i class="bi bi-box-arrow-right"></i></button></a> 
       </div>
     </header>
 
-    <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-secondary fixed-top" style="width: 250px; height: 550px; margin-top: 70px;">
+    <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-secondary fixed-top" style="width: 250px; height: 690px; margin-top: 70px;">
         <hr>
             <ul class="nav nav-pills flex-column">
             <li class="nav-item text-center">

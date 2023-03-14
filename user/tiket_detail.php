@@ -10,7 +10,7 @@ $no = 1;
 while ($data = mysqli_fetch_array($select)){
 ?>
 
-  <div class="card mb-3" style="max-width: 85rem; height: 35rem; margin-top: 55px;">
+  <div class="card mb-3" style="max-width: 90rem; height: 44rem; margin-top: 55px;">
       <div class="row g-0">
           <div class="col-md-4">
             <img src="../img/<?php echo $data['gambar']?>" alt="" style="width: 29rem; height: 20rem; padding: 10px; margin-top: 100px; border-radius: 20px;">

@@ -30,7 +30,7 @@ $id=$_GET['id'];
       $p=$pesan->fetch_array();
   ?>
 <!--- awal forms -->
-<form action="" method="post" class="container"style=" background: white; width: 500px; padding: 20px; margin-top: 65px;border-radius: 10px; box-shadow: 0 7px 25px rgba(0, 0, 0, 0.8);">
+<form action="" method="post" class="container"style=" background: white; width: 500px; padding: 20px; margin-top: 30px;border-radius: 10px; box-shadow: 0 7px 25px rgba(0, 0, 0, 0.8);">
       <img src="../img/<?php echo $p["gambar"]?>" alt="" style="width: 29rem; height: 15rem; padding: 0px; border-radius: 20px;">              
         <div class="mb-0">
           <input type="" name="nama_wisata" class="form-control border border-light" style="font-size: 35px; margin-left: -10px;" value="<?=$p['nama_wisata']?>">

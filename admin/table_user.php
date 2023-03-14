@@ -4,7 +4,7 @@ include "bot.php";
 
 
 
-<div class="container" style="margin-top: 85px; box-shadow: 0 7px 25px rgba(0, 0, 0, 0.8);  border-radius: 10px; margin-left:260px; width: 1095px;"><br>
+<div class="container" style="margin-top: 85px; box-shadow: 0 7px 25px rgba(0, 0, 0, 0.8);  border-radius: 10px; margin-left:260px; width: 1170px;"><br>
 <h2 class="text-center">Table User</h2><br>
     <div class="row">
         <div class="col-md-12">

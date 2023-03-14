@@ -6,7 +6,7 @@
   
 </body>
 
-<div class="container mt-5" style="width: 400px;">
+<div class="container" style="width: 400px; margin-top: 10rem;">
   <div class="row">
     <div class=" col col-12">
     <form action="proses_login.php" method="post">

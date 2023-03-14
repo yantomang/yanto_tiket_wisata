@@ -10,11 +10,11 @@ include "bot.php";
     <nav class="navbar bg-dark fixed-top">
         <form class="container justify-content-start">
             <a href="home.php"><i class="bi bi-arrow-left text-white"></i></a>
-            <a href="proses_logout.php"><button type="button" class="btn btn-danger" style="margin-left: 62rem;" href="">logout <i class="bi bi-box-arrow-right"></i></button></a> 
+            <a href="proses_logout.php"><button type="button" class="btn btn-danger" style="margin-left: 74rem;" href="">logout <i class="bi bi-box-arrow-right"></i></button></a> 
         </form>
     </nav>
         <div class="text-center text-white mt-5">
-            <img width="200 rem" height="200 rem" class="border border-dark" style="border-radius: 100px; margin-top: 25px;" src="../img/g2.jpg" alt="">
+        <i class="bi bi-person-circle" style="font-size: 12rem;"></i>
             <h2><?php echo $_SESSION['email']; ?></h2>
         </div>
 
@@ -24,8 +24,7 @@ include "bot.php";
         <div class="tab-pane active" id="pesanan">
             <div class="row  border g-0 rounded shadow-sm">
                 <div class="col p-3" style="height: 22rem;">
-                <div class="card border border-white" width="10rem">
-                    <table class="text-dark" style="padding: 200px;">
+                    <table class="text-white" style="padding: 200px;">
                         <tbody>
                         <?php
                         include ('koneksi.php');
@@ -59,13 +58,12 @@ include "bot.php";
                             </tr>
                             <tr>
                                 <th scope="row">Harga :</th>
-                                <td class="text-end"><?php echo $data["harga"]?></td>
+                                <td><?php echo $data["harga"]?></td>
                             </tr>
                             <?php } ?>
                         </tbody>
                     </table>
                     </div>  
-                </div>
                 </div>
             </div>
         </div>

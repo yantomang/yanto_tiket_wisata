@@ -22,7 +22,7 @@ include "user/bot.php";
 <div id="carouselExampleCaptions" class="carousel slide">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="img/bg1.jpg" class="d-block w-100" alt="..." style="height: 625px;">
+      <img src="img/bg1.jpg" class="d-block w-100" alt="..." style="height: 765px;">
       <div class="carousel-caption d-none d-md-block">
         <h1 style="margin-top: -500px;"><marquee>WELCOME TO BANDUNG</marquee></h1>
         <p class="fs-5">hi everyone, we privode varicus kind of tour packages with the best facilities and services, and also at affordable prices. we wiil amaze you with the beauty of bandung with an unforgettable exprience.</p>
@@ -37,7 +37,7 @@ include "user/bot.php";
                     <h3 class="card-title">"Rekomendasi wisata baru di bandung yang wajib kamu kunjungi saat berlibur ke kota bandung"</h3>
                 </div>
             </div>
-            <div class="card mb-3" style="max-width: 300px; margin-left: 64rem; margin-top:-9rem; background:transparent;">
+            <div class="card mb-3" style="max-width: 300px; margin-left: 67rem; margin-top:-9rem; background:transparent;">
             <div class="card-body text-dark text-center text-white border border-light">
                 <h5 class="card-title">Paket wisata bandung</h5>
                 <p class="card-text">-Profesional</p>

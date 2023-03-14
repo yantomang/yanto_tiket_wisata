@@ -4,7 +4,7 @@ include "bot.php";
 
 
 
-<div class="container" style="margin-top: 85px; box-shadow: 0 7px 25px rgba(0, 0, 0, 0.8);  border-radius: 10px;  margin-left: 260px; width: 1095px"><br>
+<div class="container" style="margin-top: 85px; box-shadow: 0 7px 25px rgba(0, 0, 0, 0.8);  border-radius: 10px;  margin-left: 260px; width: 1165px"><br>
 <div style="margin-left: 90%;">
 <button class="btn btn-dark" onclick="printDiv('print')"><i class="bi bi-printer"></i></button>
 </div>
@@ -22,7 +22,7 @@ include "bot.php";
                         <th>Jumlah Tiket</th>
                         <th>Nama Wisata</th>
                         <th>Harga Total</th>
-                        <th>check</th>
+                        <th>Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -42,10 +42,9 @@ include "bot.php";
                                 <td><?php echo $data["jumlah_tiket"]?></td>
                                 <td><?php echo $data["Nama_wisata"]?></td>
                                 <td><?php echo $data["harga"]?></td>
-                                <td><div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault">komfirmasi</label>
-                                </div></td>
+                                <td>
+                                <a href="delete_pesanan.php?id=<?php echo $data['id']?>" class="btn btn-danger"><i class="bi bi-trash-fill"></i></a>
+                                </td>
 
                             
                        
